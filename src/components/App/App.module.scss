@@ -3,17 +3,18 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+
   .game {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 
     .app {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
+      width: 100%;
     }
   }
 }

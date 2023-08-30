@@ -9,17 +9,30 @@
 .board-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .board-controls {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 39%;
+  width: 30%;
   list-style: none;
-  gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 425px) {
+    width: 100vw;
+    gap: 1rem;
+    margin: 0%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 968px) {
+    width: 60vw;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
 }
 
 .reset-button {
@@ -37,4 +50,3 @@
 .reset-button:hover {
   background-color: #2980b9;
 }
-

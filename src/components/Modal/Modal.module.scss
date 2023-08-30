@@ -1,17 +1,30 @@
-
 .modalBackground {
   position: absolute;
- margin: 0;
-  width: 100%;
-  height: 100%;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  z-index: 100;
+  top: -86px;
+  left: -44px;
 
+  @media only screen and (min-width: 320px) and (max-width: 425px) {
+    width: 100vw;
+    height: 131vh;
+    top: -95px;
+    left: 0;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 968px) {
+    width: 100vw;
+    height: 131vh;
+    top: -95px;
+    left: -154px;
+  }
   .modal {
     position: relative;
-    top: 25%;
-    left: 40%;
-    width: 400px;
+    top: 23%;
+    left: 30%;
+    width: 40%;
     background-color: white;
     border-radius: 4px;
     padding: 20px;
@@ -19,19 +32,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .gif{
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      top: 20%;
+      left: 17%;
+      width: 60%;
+    }
+
+    .gif {
       width: 220px;
       height: 220px;
     }
-    & ._win{
+    & ._win {
       background-image: url('https://media.tenor.com/rE2qbwF2DnwAAAAM/i-win-you-lose.gif');
-
-
     }
-    & ._lose{
+    & ._lose {
       background-image: url('https://media.tenor.com/ggSZDU_E2goAAAAi/meong-cat.gif');
     }
-    .content{
+    .content {
       display: flex;
       flex-direction: column;
 
@@ -39,7 +56,7 @@
         font-size: 20px;
         margin-bottom: 20px;
       }
-  
+
       .closeButton {
         background-color: #007aff;
         color: white;
@@ -49,7 +66,6 @@
         cursor: pointer;
       }
     }
-   
   }
 }
 
